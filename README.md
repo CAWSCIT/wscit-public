@@ -1,102 +1,16 @@
-# Astro Netlify Sanity Starter
+# React + Vite
 
-![Astro Netlify Sanity Starter](https://assets.stackbit.com/docs/astro-sanity-starter-thumb.jpg)
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-[Live Demo](https://astro-sanity-starter-demo.netlify.app/)
+Currently, two official plugins are available:
 
-Netlify Astro and Sanity minimal starter with [visual editing](https://docs.netlify.com/visual-editor/overview/).
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-| Prerequisites                                                                |
-| :--------------------------------------------------------------------------- |
-| [Node.js](https://nodejs.org/) v18.17.+                                      |
-| (optional) [nvm](https://github.com/nvm-sh/nvm) for Node version management. |
+## React Compiler
 
-## Getting Started
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-Create local project from this repo and run:
+## Expanding the ESLint configuration
 
-```txt
-npm install
-```
-
-### Sign Into Sanity
-
-If you are not already signed into Sanity via the CLI, install the CLI package and then run the login command.
-
-    npm install -g @sanity/cli
-    sanity login
-
-This will open a browser and walk you through the authentication process.
-
-### Import Content
-
-Once authenticated, you'll be able to create a Sanity project and import content.
-
-    npm run create-project
-
-_Note: You may want to sign into Sanity in the browser and rename your project._
-
-Once the project exists and you've set the environment variables, you can import the content.
-
-    npm run import {projectId}
-
-Replace `{projectId}` with the project ID output from the previous command.
-
-### Store Sanity Values
-
-Sign into Sanity to create an editor token, navigate to the following address (replace the `SANITY_PROJECT_ID` with your project ID) `https://www.sanity.io/manage/personal/project/SANITY_PROJECT_ID/api#tokens`. Then create `.env` file in you repo, copy & paste the following environment variables into the file and set their values.
-
-```plain
-SANITY_PROJECT_ID="..."
-SANITY_DATASET="..."
-SANITY_TOKEN="..."
-```
-
-### Run Sanity Studio
-
-Sanity Studio code exists for this project in the `studio` directory. First, install the dependencies in this directory.
-
-    cd studio
-    npm install
-
-Then create a `.env` file in the `studio` directory with the following environment variables and set their values:
-
-```plain
-SANITY_STUDIO_PROJECT_ID="..."
-SANITY_STUDIO_DATASET="..."
-```
-
-Then run the studio locally.
-
-    sanity dev
-
-If you want to see the content, you can open your browser and navigate to localhost:3333.
-
-### Start Development Server
-
-Then you can run the Astro.js development server in root directory:
-
-```txt
-npm run dev
-```
-
-Install Netlify Create CLI:
-
-    npm install -g @stackbit/cli
-
-And the Stackbit development server.
-
-    stackbit dev
-
-This outputs your own Netlify Create URL. Open this, register or sign in, and you will be directed to Netlify Create's visual editor for your new project.
-
-## Next Steps
-
-Here are a few suggestions on what to do next if you're new to Netlify visual editor:
-
-- Learn [how Netlify visual editor works](https://docs.netlify.com/create/concepts/how-create-works/)
-- Check [Netlify visual editor reference documentation](https://visual-editor-reference.netlify.com/)
-
-## Support
-
-If you get stuck along the way, get help in our [support forums](https://answers.netlify.com/).
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
