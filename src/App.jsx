@@ -5,12 +5,12 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     window.location.href = 'https://ca.org'
-  //   }, 5000)
-  //   return () => clearTimeout(timer)
-  // }, [])
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      window.location.href = 'https://ca.org'
+    }, 5000)
+    return () => clearTimeout(timer)
+  }, [])
 
   return (
     <>
